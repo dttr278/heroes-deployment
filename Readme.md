@@ -14,9 +14,6 @@ git clone --recursive https://github.com/dttr278/heroes-deployment.git checkout-
 git submodule update --remote --checkout
 ```
 
-## Config env
-Edit file in env folder with same name of sub module
-
 ## Run only one service
 ```shell
 docker-compose create {service_name} 
