@@ -1,0 +1,12 @@
+[submodule "heroes-metadata"]
+	path = heroes-metadata
+	url = https://github.com/quyphandang/heroes-metadata.git
+[submodule "heroes-crontab-redeem"]
+	path = heroes-crontab-redeem
+	url = https://github.com/cryptoviet/heroes-crontab-redeem.git
+[submodule "heroes-ingame"]
+	path = heroes-ingame
+	url = https://github.com/cryptoviet/heroes-ingame
+[submodule "heroes-issue"]
+	path = heroes-issue
+	url = https://github.com/cryptoviet/heroes-issue.git

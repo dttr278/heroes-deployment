@@ -1,0 +1,54 @@
+---
+version: "3"
+services:
+  heroes-crontab-redeem:
+    image: node:16
+    restart: always
+    container_name: heroes-crontab-redeem
+    working_dir: /app
+    volumes:
+      - ./heroes-crontab-redeem:/app
+    env_file:
+      - ./env/heroes-crontab-redeem.env
+    command: >
+      sh -c "yarn install && yarn run start"
+
+  heroes-ingame:
+    image: node:16
+    restart: always
+    container_name: heroes-ingame
+    working_dir: /app
+    volumes:
+      - ./heroes-ingame:/app
+    env_file:
+      - ./env/heroes-ingame.env
+    ports:
+      - "5555:5555"
+    command: >
+      sh -c "yarn install && yarn run start"
+
+  heroes-issue:
+    image: node:16
+    restart: always
+    container_name: heroes-issue
+    working_dir: /app
+    volumes:
+      - ./heroes-issue:/app
+    env_file:
+      - ./env/heroes-issue.env
+    command: >
+      sh -c "yarn install && yarn run start"
+
+  heroes-metadata:
+    image: node:16
+    restart: always
+    container_name: heroes-metadata
+    working_dir: /app
+    volumes:
+      - ./heroes-metadata:/app
+    env_file:
+      - ./env/heroes-metadata.env
+    ports:
+      - "5005:5005"
+    command: >
+      sh -c "yarn install && yarn run start"
