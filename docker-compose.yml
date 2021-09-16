@@ -8,8 +8,6 @@ services:
     working_dir: /app
     volumes:
       - ./heroes-crontab-redeem:/app
-    env_file:
-      - ./env/heroes-crontab-redeem.env
     command: >
       sh -c "yarn install && yarn run start"
 
@@ -20,8 +18,6 @@ services:
     working_dir: /app
     volumes:
       - ./heroes-ingame:/app
-    env_file:
-      - ./env/heroes-ingame.env
     ports:
       - "5555:5555"
     command: >
@@ -34,8 +30,6 @@ services:
     working_dir: /app
     volumes:
       - ./heroes-issue:/app
-    env_file:
-      - ./env/heroes-issue.env
     command: >
       sh -c "yarn install && yarn run start"
 
@@ -46,8 +40,6 @@ services:
     working_dir: /app
     volumes:
       - ./heroes-metadata:/app
-    env_file:
-      - ./env/heroes-metadata.env
     ports:
       - "5005:5005"
     command: >
