@@ -11,7 +11,7 @@ services:
     ports:
       - "5000:5000"
     command: >
-      sh -c "yarn install && yarn run start"
+      sh -c "yarn install && yarn run start && yarn run launch"
 
   heroes-ingame:
     image: node:16
@@ -33,7 +33,7 @@ services:
     volumes:
       - ./heroes-issue:/app
     ports:
-      - "6666:6666"
+      - "8989:8989"
     command: >
       sh -c "yarn install && yarn run start"
 
